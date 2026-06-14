@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>#Pro Мебель</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+    font-family:'Montserrat',sans-serif;
+}
+
+body{
+    color:white;
+    background-color:#1a1a1a;
+    background-image:
+    linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),
+    url('https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1600&auto=format&fit=crop');
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+}
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(0,0,0,0.85);
+    backdrop-filter:blur(8px);
+    padding:20px;
+    text-align:center;
+}
+
+header h1{
+    color:orange;
+    margin-bottom:15px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    transition:0.3s;
+    display:inline-block;
+}
+
+nav a:hover{
+    color:orange;
+    transform:scale(1.15);
+}
+
+nav a:focus,
+.btn:focus{
+    outline:2px solid orange;
+    outline-offset:3px;
+}
+
+section{
+    padding:60px 10%;
+}
+
+.main{
+    text-align:center;
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6)
+    ),
+    url('https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1600&auto=format&fit=crop');
+
+    background-size:cover;
+    background-position:center;
+    padding:180px 10%;
+}
+
+.main h2{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.main p{
+    font-size:22px;
+    margin-bottom:30px;
+}
+
+.btn{
+    background:orange;
+    color:white;
+    border:none;
+    padding:15px 30px;
+    border-radius:10px;
+    cursor:pointer;
+    transition:0.3s;
+    font-size:16px;
+}
+
+.btn:hover{
+    transform:scale(1.1);
+    background:#ff9500;
+}
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:rgba(42,42,42,0.9);
+    border-radius:15px;
+    overflow:hidden;
+    text-align:center;
+    padding-bottom:20px;
+    transition:0.4s;
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+.card:hover{
+    transform:translateY(-10px) scale(1.03);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card h3{
+    margin:15px 0;
+}
+
+.card p{
+    margin-bottom:15px;
+    color:#ddd;
+}
+
+.price{
+    display:block;
+    font-size:24px;
+    font-weight:bold;
+    color:orange;
+    margin-bottom:15px;
+}
+
+.gallery{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.gallery img{
+    width:300px;
+    height:220px;
+    object-fit:cover;
+    border-radius:15px;
+    transition:0.4s;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+}
+
+.about{
+    text-align:center;
+}
+
+.advantages{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+    margin-top:40px;
+}
+
+.advantage{
+    background:#2a2a2a;
+    width:250px;
+    padding:25px;
+    border-radius:15px;
+}
+
+.advantage h3{
+    color:orange;
+    margin-bottom:15px;
+}
+
+.contacts{
+    text-align:center;
+    background:rgba(34,34,34,0.9);
+    border-radius:15px;
+}
+
+.contacts p{
+    margin:10px 0;
+    font-size:18px;
+}
+
+footer{
+    background:rgba(0,0,0,0.9);
+    text-align:center;
+    padding:30px;
+    margin-top:40px;
+}
+
+footer p{
+    margin:10px 0;
+}
+
+@media(max-width:768px){
+
+    .main h2{
+        font-size:40px;
+    }
+
+    nav a{
+        display:block;
+        margin:10px 0;
+    }
+
+    section{
+        padding:40px 5%;
+    }
+
+}
+
+</style>
+</head>
+<body>
+
+<header>
+
+<h1>#Pro Мебель</h1>
+
+<nav>
+    <a href="#home">Главная</a>
+    <a href="#catalog">Каталог</a>
+    <a href="#about">О компании</a>
+    <a href="#contacts">Контакты</a>
+</nav>
+
+</header>
+
+<section class="main" id="home">
+
+<h2>Мебель в стиле Loft</h2>
+
+<p>
+Интернет-магазин современной мебели в Симферополе
+</p>
+
+<button class="btn" onclick="showMessage()">
+Заказать консультацию
+</button>
+
+</section>
+
+<section id="catalog">
+
+<h2 style="text-align:center; margin-bottom:40px;">
+Каталог товаров
+</h2>
+
+<div class="products">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=1200&auto=format&fit=crop" alt="Диван">
+
+<h3>Лофт-диван</h3>
+
+<p>Натуральное дерево и металл</p>
+
+<span class="price">89 900 ₽</span>
+
+<button class="btn">Купить</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop" alt="Стол">
+
+<h3>Стол Loft</h3>
+
+<p>Массив дуба и сталь</p>
+
+<span class="price">42 500 ₽</span>
+
+<button class="btn">Купить</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1519947486511-46149fa0a254?q=80&w=1200&auto=format&fit=crop" alt="Кресло">
+
+<h3>Кресло Loft</h3>
+
+<p>Экокожа и металл</p>
+
+<span class="price">27 300 ₽</span>
+
+<button class="btn">Купить</button>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 style="text-align:center; margin-bottom:40px;">
+Галерея интерьеров
+</h2>
+
+<div class="gallery">
+
+<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop" alt="Интерьер">
+
+<img src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200&auto=format&fit=crop" alt="Мебель">
+
+<img src="https://images.unsplash.com/photo-1484101403633-562f891dc89a?q=80&w=1200&auto=format&fit=crop" alt="Loft">
+
+</div>
+
+</section>
+
+<section class="about" id="about">
+
+<h2 style="margin-bottom:30px;">
+О компании
+</h2>
+
+<p>
+#Pro Мебель — магазин мебели в стиле Loft.
+Мы создаем современную мебель из натуральных материалов
+для дома и офиса.
+</p>
+
+</section>
+
+<section>
+
+<h2 style="text-align:center; margin-bottom:40px;">
+Наши преимущества
+</h2>
+
+<div class="advantages">
+
+<div class="advantage">
+<h3>Качество</h3>
+<p>
+Используем натуральные материалы и надежную фурнитуру.
+</p>
+</div>
+
+<div class="advantage">
+<h3>Современный стиль</h3>
+<p>
+Создаем мебель в популярном стиле Loft.
+</p>
+</div>
+
+<div class="advantage">
+<h3>Доставка</h3>
+<p>
+Быстрая доставка по Симферополю и Крыму.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="contacts" id="contacts">
+
+<h2 style="margin-bottom:30px;">
+Контакты
+</h2>
+
+<p>г. Симферополь, ул. Мебельная, 15</p>
+<p>+7 (978) 000-00-00</p>
+<p>promebel@mail.ru</p>
+
+</section>
+
+<footer>
+
+<p>© 2026 #Pro Мебель</p>
+
+<p>
+Сайт разработан студентом 3 курса,
+группы 308 о/з — Бобков И.А.
+</p>
+
+</footer>
+
+<script>
+
+function showMessage(){
+    alert("Спасибо! Мы свяжемся с вами.");
+}
+
+</script>
+
+</body>
+</html>
